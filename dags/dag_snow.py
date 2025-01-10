@@ -188,7 +188,7 @@ def upload_csv_to_snowflake():
         account=os.getenv("SNOWFLAKE_ACCOUNT"),
         warehouse=os.getenv("SNOWFLAKE_WAREHOUSE"),
         database=os.getenv("SNOWFLAKE_DATABASE"),
-        schema=os.getenv("SNOWFLAKE_SCHEMA"),
+        schema=os.getenv("SNOWFLAKE_SCHEMA")
     )
 
     # Specify the stage and file
