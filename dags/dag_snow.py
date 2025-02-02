@@ -50,8 +50,8 @@ dag = DAG(
     "adzuna_daily_job_ingestion_snowflake_operator",
     default_args=default_args,
     description="Fetch job postings from Adzuna and insert into Snowflake using SnowflakeOperator",
-    schedule_interval=timedelta(days=1),
-    start_date=datetime(2024, 1, 1),
+    schedule=timedelta(days=1),
+    start_date=datetime(2025, 2, 19),
     catchup=False,
 )
 
@@ -193,7 +193,7 @@ def upload_csv_to_snowflake():
 
     # Specify the stage and file
     stage_name = "@MY_STAGE"
-    file_path = "/opt/airflow/data/job_data.csv"  # Update with the correct path
+    file_path = "C:\Users\bakoa\jobs_trends_analysis\data\job_data.csv"  # Update with the correct path
 
     # Execute the PUT command
     with conn.cursor() as cur:
